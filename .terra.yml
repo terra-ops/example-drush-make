@@ -1,0 +1,8 @@
+document_root: "/www"
+
+hooks:
+    build: |
+      drush make drupal.make www --prepare-install -y
+    deploy: |
+      drush updb -y
+      drush cc all
