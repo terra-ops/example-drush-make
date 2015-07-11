@@ -3,6 +3,13 @@ document_root: "/www"
 hooks:
     build: |
       drush make drupal.make www --prepare-install -y
+      echo "$databases['ddefault']['default'] = array(
+        'driver' => 'mysql',
+        'database' => 'drupal',
+        'username' => 'drupal',
+        'password' => 'drupal',
+        'host' => 'database',
+      );" >> www/sites/default/settings.php
     deploy: |
       drush updb -y
       drush cc all
