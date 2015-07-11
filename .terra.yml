@@ -3,8 +3,7 @@ document_root: "/www"
 hooks:
     build: |
       drush make drupal.make www --prepare-install -y
-      echo "
-\$databases['default']['default'] = array(
+      echo "\$databases['default']['default'] = array(
         'driver' => 'mysql',
         'database' => 'drupal',
         'username' => 'drupal',
