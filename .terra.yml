@@ -10,7 +10,7 @@ hooks:
         'password' => 'drupal',
         'host' => 'database',
       );" >> www/sites/default/settings.php
-    pre_enable: |
+    enable: |
       drush {{alias}} site-install
     deploy: |
       drush updb -y
