@@ -12,6 +12,7 @@ hooks:
       );" >> www/sites/default/settings.php
     enable: |
       drush {{alias}} site-install -y
+      drush {{alias}} uli
     deploy: |
-      drush updb -y
-      drush cc all
+      drush {{alias}} updb -y
+      drush {{}} cc all
