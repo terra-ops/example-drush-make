@@ -11,7 +11,7 @@ hooks:
         'host' => 'database',
       );" >> www/sites/default/settings.php
     enable: |
-      drush {{alias}} site-install -y -v --debug
+      drush {{alias}} site-install -y
       drush {{alias}} uli
     deploy: |
       drush {{alias}} updb -y
