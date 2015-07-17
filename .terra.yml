@@ -15,4 +15,4 @@ hooks:
       drush {{alias}} uli
     deploy: |
       drush {{alias}} updb -y
-      drush {{}} cc all
+      drush {{alias}} cc all
