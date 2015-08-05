@@ -10,7 +10,7 @@ hooks:
         'password' => 'drupal',
         'host' => 'database',
       );" >> www/sites/default/settings.php
-    enable: |
+    enable_first: |
       drush {{alias}} site-install -y
       drush {{alias}} uli
     deploy: |
